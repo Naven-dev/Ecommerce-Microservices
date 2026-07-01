@@ -1,24 +1,7 @@
 # ============================================================
-# Stage 1 — Build
+# Runtime — jar already built by GitHub Actions
 # ============================================================
-FROM eclipse-temurin:17-jdk-alpine AS builder
-
-WORKDIR /app
-
-COPY .mvn/ .mvn/
-COPY mvnw pom.xml ./
-
-# Download dependencies separately — cached if pom.xml unchanged
-RUN ./mvnw dependency:go-offline -q
-
-COPY src/ src/
-
-RUN ./mvnw package -DskipTests -q
-
-# ============================================================
-# Stage 2 — Runtime
-# ============================================================
-FROM eclipse-temurin:17-jre-alpine AS runtime
+FROM eclipse-temurin:17-jre-alpine
 
 # Non-root user for security
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup
@@ -26,7 +9,7 @@ USER appuser
 
 WORKDIR /app
 
-COPY --from=builder /app/target/product-service-*.jar app.jar
+COPY target/product-service-*.jar app.jar
 
 # Override dev-only properties at runtime via env vars
 ENV SPRING_H2_CONSOLE_ENABLED=false \
