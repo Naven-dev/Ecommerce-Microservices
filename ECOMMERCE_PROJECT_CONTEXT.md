@@ -618,7 +618,7 @@ mvnw.cmd verify                      # tests + JaCoCo coverage check (80% thresh
 
 ## 14. What Is Built — Phase 7: GitHub Actions CI/CD
 
-**Repository:** `https://github.com/rajsreeworks/ecommerce-microservices`
+**Repository:** `https://github.com/Naven-dev/ecommerce-microservices`
 
 **Registry:** GitHub Container Registry (`ghcr.io`) — uses built-in `GITHUB_TOKEN`, no extra accounts needed.
 
@@ -641,10 +641,10 @@ push to main
                       └── both must pass
                                 │
                     build-and-push (4 services in parallel)
-                    ├── ghcr.io/rajsreeworks/product-service:latest + :<sha>
-                    ├── ghcr.io/rajsreeworks/order-service:latest + :<sha>
-                    ├── ghcr.io/rajsreeworks/eureka-server:latest + :<sha>
-                    └── ghcr.io/rajsreeworks/api-gateway:latest + :<sha>
+                    ├── ghcr.io/Naven-dev/product-service:latest + :<sha>
+                    ├── ghcr.io/Naven-dev/order-service:latest + :<sha>
+                    ├── ghcr.io/Naven-dev/eureka-server:latest + :<sha>
+                    └── ghcr.io/Naven-dev/api-gateway:latest + :<sha>
 ```
 
 ### File Inventory
@@ -687,7 +687,7 @@ Cloud Run is serverless — you give it a container image, it handles everything
 - `/actuator/health` endpoints → Cloud Run uses these for health checks
 - `XX:+UseContainerSupport` JVM flag → Cloud Run is containerized, JVM adapts automatically
 - Non-root user in Dockerfiles → GCP security best practice already followed
-- Docker images live at `ghcr.io/rajsreeworks/*:latest` → Cloud Run can pull directly
+- Docker images live at `ghcr.io/Naven-dev/*:latest` → Cloud Run can pull directly
 
 ---
 
@@ -723,7 +723,7 @@ _(Nothing planned beyond Phase 8 for this project)_
 ## 17. Project Directory Layout
 
 ```
-C:\Users\srajs\IdeaProjects\           (git root → github.com/rajsreeworks/ecommerce-microservices)
+C:\Users\naven\Navi\           (git root → github.com/Naven-dev/ecommerce-microservices)
 ├── .github/workflows/ci.yml           ✅ Complete (Phase 7 — CI/CD)
 ├── .gitignore
 ├── docker-compose.yml                 ✅ Complete (Phase 3 — all 4 services)
