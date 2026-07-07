@@ -93,7 +93,7 @@ com.naveen.<servicename>/
 
 ## 6. What Is Built — Phase 1: Product Service
 
-**Location:** `C:\Users\srajs\IdeaProjects\product-service\`
+**Location:** `C:\Users\naven\Navi\product-service\`
 
 ### Entity: `Product`
 
@@ -175,7 +175,7 @@ src/test/java/com/naveen/productservice/
 
 ## 7. What Is Built — Phase 2: Order Service
 
-**Location:** `C:\Users\srajs\IdeaProjects\order-service\`
+**Location:** `C:\Users\naven\Navi\order-service\`
 
 ### Entity: `Order`
 
@@ -280,7 +280,7 @@ src/test/java/com/naveen/orderservice/
 
 ## 8. What Is Built — Phase 3: Docker Compose
 
-**Location:** `C:\Users\srajs\IdeaProjects\docker-compose.yml`
+**Location:** `C:\Users\naven\Navi\docker-compose.yml`
 
 ### What it does
 
@@ -323,7 +323,7 @@ test: ["CMD-SHELL", "wget -qO- http://localhost:<port>/actuator/health || exit 1
 
 ## 9. What Is Built — Phase 4: Eureka Server
 
-**Location:** `C:\Users\srajs\IdeaProjects\eureka-server\`
+**Location:** `C:\Users\naven\Navi\eureka-server\`
 
 ### What it does
 
@@ -362,7 +362,7 @@ Both `product-service` and `order-service` received:
 
 ## 10. What Is Built — Phase 5: API Gateway
 
-**Location:** `C:\Users\srajs\IdeaProjects\api-gateway\`
+**Location:** `C:\Users\naven\Navi\api-gateway\`
 
 ### What it does
 
@@ -581,7 +581,7 @@ All traffic can now go through gateway on port 8080.
 - Docker Desktop installed and running
 
 ```bash
-# From C:\Users\srajs\IdeaProjects\
+# From C:\Users\naven\Navi\
 docker compose up --build
 ```
 
@@ -743,7 +743,7 @@ C:\Users\naven\Navi\           (git root → github.com/Naven-dev/ecommerce-micr
 #### Start
 
 ```bash
-cd C:\Users\srajs\IdeaProjects
+cd C:\Users\naven\Navi
 docker compose up --build
 ```
 
