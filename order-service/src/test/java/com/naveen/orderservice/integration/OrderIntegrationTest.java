@@ -119,6 +119,12 @@ class OrderIntegrationTest {
                         .withHeader("Content-Type", "application/json")
                         .withBody(lowStockProduct)));
 
+        WireMock.stubFor(WireMock.patch(WireMock.urlPathEqualTo("/api/v1/products/1/reduce-stock"))
+                .willReturn(WireMock.aResponse()
+                        .withStatus(409)
+                        .withHeader("Content-Type", "application/json")
+                        .withBody("{\"message\": \"Insufficient stock\"}")));
+
         OrderRequest request = OrderRequest.builder().productId(1L).quantity(10).build();
 
         mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/orders")

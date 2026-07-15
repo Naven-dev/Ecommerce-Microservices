@@ -129,7 +129,13 @@
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
-
+            <!-- SonarQube / SonarCloud Maven Plugin -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <!-- Use the latest stable version -->
+                <version>5.0.0.4389</version>
+            </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
