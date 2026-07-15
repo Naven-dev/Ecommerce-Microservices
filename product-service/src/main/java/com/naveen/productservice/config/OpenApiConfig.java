@@ -32,8 +32,8 @@ public class OpenApiConfig {
                                 .url("https://www.apache.org/licenses/LICENSE-2.0")))
                 .servers(List.of(
                         new Server()
-                                .url("http://localhost:" + serverPort)
-                                .description("Local development server")
+                                .url("/")
+                                .description("Current server")
                 ));
     }
 }
