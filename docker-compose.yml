@@ -40,6 +40,8 @@ services:
       SPRING_H2_CONSOLE_ENABLED: "false"
       SPRING_JPA_SHOW_SQL: "false"
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://eureka-server:8761/eureka"
+      DB_USERNAME: ${PRODUCT_DB_USERNAME}
+      DB_PASSWORD: ${PRODUCT_DB_PASSWORD}
     networks:
       - ecommerce-network
     depends_on:
@@ -69,6 +71,8 @@ services:
       # Empty string → Feign uses Eureka discovery instead of direct URL
       PRODUCT_SERVICE_URL: ""
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: "http://eureka-server:8761/eureka"
+      DB_USERNAME: ${ORDER_DB_USERNAME}
+      DB_PASSWORD: ${ORDER_DB_PASSWORD}
     networks:
       - ecommerce-network
     depends_on:
